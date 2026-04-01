@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import DashboardView from './views/DashboardView.vue';
-
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -8,9 +7,7 @@ const routes: RouteRecordRaw[] = [
     component: DashboardView,
   },
 ];
-
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
-
