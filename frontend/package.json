@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
     "test:unit": "vitest"
   },
@@ -24,4 +24,3 @@
     "vitest": "^2.1.4"
   }
 }
-
