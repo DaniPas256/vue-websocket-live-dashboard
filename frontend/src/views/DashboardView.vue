@@ -72,6 +72,8 @@ export default defineComponent({
     if (this.matchesStore.status === "idle") {
       await this.matchesStore.loadInitial();
     }
+
+    console.log("DashboardView mounted, connecting to WebSocket channel");
     this.wsChannel.connect();
   },
 });

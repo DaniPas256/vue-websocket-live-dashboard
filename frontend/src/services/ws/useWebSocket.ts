@@ -37,6 +37,7 @@ export function useWebSocket(url: string, options?: UseWebSocketOptions) {
 
   const connect = () => {
     if (socket || isConnecting.value) return;
+
     isConnecting.value = true;
     lastError.value = null;
 
@@ -47,15 +48,19 @@ export function useWebSocket(url: string, options?: UseWebSocketOptions) {
           ? `${wsBaseUrl}${url}`
           : `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}${url}`;
 
+    console.log("Connecting to WebSocket at", wsUrl);
     socket = new WebSocket(wsUrl);
 
     socket.onopen = () => {
+      console.log('WebSocket connected');
       isConnecting.value = false;
       isConnected.value = true;
       reconnectAttempts.value = 0;
     };
 
     socket.onclose = () => {
+      console.log('WebSocket closed');
+      
       isConnected.value = false;
       isConnecting.value = false;
 
