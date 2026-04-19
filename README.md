@@ -1,6 +1,6 @@
 ## Real-Time Live Dashboard
 
-A project created to showcase my programming skills. Check out the [DEMO](https://danipas256.github.io/live-dashboard/). 
+A project created to showcase my programming skills. Check out the [DEMO](https://danipas256.github.io/vue-websocket-live-dashboard/). 
 
 Real-time dashboard that streams live match data from a Node/Express WebSocket backend into a Vue 3 + Pinia + TypeScript frontend.
 
