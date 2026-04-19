@@ -58,9 +58,13 @@ export function useWebSocket(url: string, options?: UseWebSocketOptions) {
       reconnectAttempts.value = 0;
     };
 
-    socket.onclose = () => {
-      console.log('WebSocket closed');
-      
+    socket.onclose = (e) => {
+      console.log('WebSocket close', {
+        code: e.code,
+        reason: e.reason,
+        wasClean: e.wasClean
+      });
+
       isConnected.value = false;
       isConnecting.value = false;
 
