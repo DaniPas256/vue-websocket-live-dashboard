@@ -12,7 +12,7 @@ export function useMatchUpdatesChannel() {
   const matchesStore = useMatchesStore();
   const connectionStore = useConnectionStore();
 
-  const ws = useWebSocket('/ws/matches', {
+  const ws = useWebSocket('ws/matches', {
     reconnectIntervalMs: 2000,
     maxReconnectAttempts: 50,
   });
