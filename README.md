@@ -1,5 +1,7 @@
 ## Real-Time Live Dashboard
 
+Checkout also [NUXT Version](https://github.com/DaniPas256/nuxt-live-dashboard)
+
 A project created to showcase my programming skills. Check out the [DEMO](https://danipas256.github.io/vue-websocket-live-dashboard/). 
 
 Real-time dashboard that streams live match data from a Node/Express WebSocket backend into a Vue 3 + Pinia + TypeScript frontend.
